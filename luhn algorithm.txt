@@ -1,0 +1,25 @@
+### luhn algorithm
+
+
+Choose a Number Sequence:
+
+    Start with a random sequence of numbers. For example, let's say your sequence is 4567 1234 5678.
+
+2. Apply the Luhn Algorithm to Determine the Final Digit:
+
+    Starting from the right, double every second digit. If the doubled value is greater than 9, subtract 9 from it.
+    Sum all the digits.
+    The final digit (check digit) makes the total a multiple of 10. To find it, compute (10 - (total sum % 10)) % 10.
+
+Example:
+
+    Given sequence: 4567 1234 567_
+    Double every second digit and modify if necessary:
+        8_12_10_8_
+    Sum all the numbers including the undoubled digits:
+        4+8+5+1+2+2+3+1+0+5+6+8 = 45
+    Calculate the check digit:
+        (10 - (45 % 10)) % 10 = 5
+    Complete sequence: 4567 1234 5675
+    3. Add the Check Digit to the Right Side of Your Sequence:
+    The final number in the sequence should be the check digit you calculated earlier. In this case, it would be "5".
